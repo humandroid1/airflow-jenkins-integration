@@ -10,7 +10,6 @@ node{
     dir("/home/ec2-user/airflow/") {
     sh "pwd"
 }
-    sh 'cd /home/ec2-user/airflow/'
     sh 'airflow scheduler & airflow webserver -p 8080 && fg'
    
     
