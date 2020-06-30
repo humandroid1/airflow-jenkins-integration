@@ -10,6 +10,7 @@ node{
     sh 'whoami'
     dir("/usr/local/airflow/") {
     sh "pwd"
+    sh 'cd /usr/local/airflow'
     sh 'sudo airflow scheduler & airflow webserver -p 8080 && fg'
 }
     
