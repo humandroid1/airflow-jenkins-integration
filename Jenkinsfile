@@ -5,7 +5,7 @@ node{
    stage('Deploy to airflow'){
     sshagent(['jenkinstom']) {
     sh 'whoami'
-    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/airflow_integration_2/*.py  ec2-user@52.90.130.110:/usr/local/airflow/dags/'
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/airflow_integration_2/*.py  ec2-user@34.203.233.25:/usr/local/airflow/dags/'
     sh 'pwd'
     sh 'whoami'
     dir("/usr/local/airflow/") {
