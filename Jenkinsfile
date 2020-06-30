@@ -11,7 +11,7 @@ node{
     dir("/usr/local/airflow/") {
     sh "pwd"
     sh 'cd /usr/local/airflow'
-    sh 'sudo airflow scheduler & airflow webserver -p 8080 && fg'
+    sh 'airflow webserver -p 8080 & airflow scheduler && fg'
 }
     
    
