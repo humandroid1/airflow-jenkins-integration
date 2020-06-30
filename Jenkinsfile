@@ -9,6 +9,7 @@ node{
     sh 'pwd'
     sh 'whoami'
     dir("/usr/local/airflow/") {
+    sh 'sudo chown -R jenkins:jenkins airflow'
     sh "pwd"
 }
     sh 'sudo airflow scheduler & airflow webserver -p 8080 && fg'
