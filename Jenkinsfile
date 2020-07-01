@@ -12,11 +12,10 @@ node{
     sh 'whoami'
     dir("/home/ec2-user/airflow/") {
     sh "pwd"
-    sh 'airflow webserver -p 8080 & airflow scheduler && fg'
-}
-    
    
     
+   
+    }
      
     
     }
