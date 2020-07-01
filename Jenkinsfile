@@ -9,8 +9,10 @@ node{
     sh 'pwd'
     }
     sh 'scp /home/ec2-user/jenkins.pem ec2-user@ec2-34-207-99-204.compute-1.amazonaws.com:/home/ec2-user/'
+    sh'pwd'
     sh 'whoami'
     sh 'ls'
+    
     dir("/home/ec2-user/airflow/") {
     sh "pwd"
    
