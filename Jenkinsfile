@@ -15,6 +15,7 @@ node{
     
     dir("/home/ec2-user/airflow/") {
     sh "pwd"
+    sh 'ls'
    
     
    
