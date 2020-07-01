@@ -12,10 +12,7 @@ node{
     sh'pwd'
     sh 'whoami'
     sh 'ls'
-      dir("/home/ec2-user/"){
-        sh 'ls'
-          }
-    dir("/home/ec2-user/airflow/") {
+    dir("/home/ec2-user/airflow/dags") {
     sh "pwd"
     sh 'ls'
    
