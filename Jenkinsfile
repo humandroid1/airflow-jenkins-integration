@@ -7,7 +7,6 @@ node{
     sh 'whoami'
     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/airflow_integration_5/*.py  ec2-user@34.207.99.204:/home/ec2-user/airflow/dags/'
     sh 'pwd'
-    }
     sh 'scp /home/ec2-user/jenkins.pem ec2-user@ec2-34-207-99-204.compute-1.amazonaws.com:/home/ec2-user/'
     sh'pwd'
     sh 'whoami'
@@ -16,7 +15,7 @@ node{
     sh "pwd"
     sh 'ls'
    
-    
+    }  
    
     }
      
