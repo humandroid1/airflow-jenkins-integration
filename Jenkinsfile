@@ -5,15 +5,17 @@ node{
    stage('Deploy to airflow'){
     sshagent(['jenkinstom']) {
      sh  "ssh -v ec2-user@3.85.1.101 'ls' "
-    //sh 'whoami'
-    //sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/airflow_integration_5/*.py  ec2-user@34.207.99.204:/home/ec2-user/airflow/dags/'
-    sh 'pwd'
+    sh 'whoami'
+    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/airflow_integration_5/*.py  ec2-user@34.207.99.204:/home/ec2-user/airflow/dags/'
+    
     //sh 'scp /home/ec2-user/jenkins.pem ec2-user@ip-172-31-39-88.ec2.internal:/home/ec2-user/'
-    //sh'pwd'
-    //sh 'whoami'
-    //sh 'ls'
-    //ssh ec2-user 18.215.229.222 'ls'
-   
+    sh'pwd'
+    sh 'whoami'
+    sh 'ls'
+     sh  "ssh -v ec2-user@3.85.1.101 'cd /home/ec2-user/airflow/' "
+     sh  "ssh -v ec2-user@3.85.1.101 'pwd' "
+     sh "ssh -v ec2-user@3.85.1.101  'ls' "
+      sh  "ssh -v ec2-user@3.85.1.101 'airflow webserver -p 8080 & airflow scheduler && fg' "  
     //dir("/home/ec2-user/airflow/dags") {
     //sh "pwd"
     //sh 'ls'
